@@ -139,8 +139,8 @@ def gen_prompt(question,content_list, context_length_limit=11000,debug=False):
 
 
 def chat(prompt, stream=True, debug=False):
-    openai.base_url = "http://freegpt35:3040/v1/"
-    openai.api_key = "EMPTY"
+    openai.base_url = "https://openapi.xiabing.work"
+    openai.api_key = "demo"
     total_content = ""
     for chunk in openai.chat.completions.create(
         model="gpt-3.5-turbo",
